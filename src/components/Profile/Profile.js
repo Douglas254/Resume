@@ -8,6 +8,8 @@ import resumeData from "../../utils/resumeData";
 import "./Profile.css";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineContent from "@material-ui/lab/TimelineContent";
+import CustomButton from "../Button/Button";
+import GetApp from "@material-ui/icons/GetApp";
 
 // function to dislay the timeline items on the profile section
 const CustomTimelineItem = ({ title, text, link }) => (
@@ -62,8 +64,9 @@ const Profile = () => {
             />
           ))}
         </CustomTimeline>
-        <br />
-        <button>My Button here</button>
+        <div className="button_container">
+          <CustomButton text="Download Cv" icon={<GetApp />} />
+        </div>
       </div>
     </div>
   );
