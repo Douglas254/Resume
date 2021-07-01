@@ -30,3 +30,38 @@
 .profile_image img {
   width: 97%;
 }
+
+/* Information  */
+.profile_information {
+  top: 0;
+  left: 0;
+  margin: -40px 3px 30px;
+}
+
+.profile_information .MuiTimelineItem-root {
+  display: flex;
+  position: relative;
+  list-style: none;
+  min-height: 20px;
+}
+
+.profile_information .timeline .timeline_content {
+  margin-top: 2px;
+  margin-bottom: 12px;
+}
+
+.timelineItem_text {
+  font-size: 13.5px !important;
+  color: #787878 !important;
+  font-weight: 400 !important;
+}
+
+.timelineItem_text > a {
+  color: #787878 !important;
+  text-decoration: none;
+}
+
+/* if the direct element is a span */
+.timelineItem_text > span {
+  color: #000000 !important;
+}

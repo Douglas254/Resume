@@ -24,7 +24,6 @@ const CustomTimeline = ({ title, icon, children }) => {
           </Typography>
         </TimelineContent>
       </TimelineItem>
-
       {children}
     </Timeline>
   );
@@ -32,7 +31,7 @@ const CustomTimeline = ({ title, icon, children }) => {
 
 export const CustomTimelineSeparator = () => (
   <TimelineSeparator className="separator_padding">
-    <TimelineDot className="timeline_dot" />
+    <TimelineDot variant={"outlined"} className="timeline_dot" />
     <TimelineConnector />
   </TimelineSeparator>
 );
