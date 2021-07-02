@@ -10,7 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fafafa;
-  /* overflow: hidden; */
+  overflow-x: hidden;
   background: url("../src/assets/images/background.png");
 }
 
