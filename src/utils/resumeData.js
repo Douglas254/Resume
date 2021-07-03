@@ -2,6 +2,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+import { AssignmentOutlined, WebOutlined } from "@material-ui/icons";
 
 const resumeData = {
   name: "Douglas Obara",
@@ -77,6 +78,50 @@ const resumeData = {
       date: "2014 - 2015",
       description:
         "Expenses as material breeding insisted building to in. Continual so distrusts pronounce by unwilling listening. Thing do taste on we manor.",
+    },
+  ],
+
+  services: [
+    {
+      title: "Web Development",
+      description: "i have experience in website development",
+      icon: <WebOutlined />,
+    },
+    {
+      title: "Branding Identity",
+      description:
+        "We will make you a brand that is catchy and leaves a trace.",
+      icon: <AssignmentOutlined />,
+    },
+    {
+      title: "Illustrator",
+      description: "I have been working on illustration design for 6 years.",
+      icon: <WebOutlined />,
+    },
+  ],
+
+  skills: [
+    {
+      title: "FRONT-END",
+      description: [
+        "ReactJS",
+        "Javascript",
+        "TypeScript",
+        "Bootstrap",
+        "Material UI",
+      ],
+    },
+    {
+      title: "BACK-END",
+      description: ["NodeJS", "Java", "Python", "Solidity"],
+    },
+    {
+      title: "DATABASES",
+      description: ["Firebases", "No SQL Server", "MySQL", "MongoDB"],
+    },
+    {
+      title: "SOURCE CONTROL",
+      description: ["Git", "GitHub", "SCRUM/Agile"],
     },
   ],
 };
