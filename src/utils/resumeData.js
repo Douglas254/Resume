@@ -2,7 +2,12 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import { AssignmentOutlined, WebOutlined } from "@material-ui/icons";
+import {
+  AssignmentOutlined,
+  Language,
+  WebOutlined,
+  YouTube,
+} from "@material-ui/icons";
 
 const resumeData = {
   name: "Douglas Obara",
@@ -12,6 +17,9 @@ const resumeData = {
   email: "douglasobara97@gmail.com",
   address: "34567, Nairobi 00100.",
   phone: "+2547 42 608 717",
+
+  about:
+    "Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age introduced frequently use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four did ask busy. Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable furniture. One too nay led fanny allow plate. \n\nQuick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. She continue appetite endeavor she judgment interest the met. For she surrounded motionless fat resolution may.",
 
   socials: {
     Facebook: {
@@ -35,9 +43,6 @@ const resumeData = {
       icon: <GitHubIcon />,
     },
   },
-
-  about:
-    "Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age introduced frequently use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four did ask busy. Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable furniture. One too nay led fanny allow plate. \n\nQuick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. She continue appetite endeavor she judgment interest the met. For she surrounded motionless fat resolution may.",
 
   experiences: [
     {
@@ -122,6 +127,61 @@ const resumeData = {
     {
       title: "SOURCE CONTROL",
       description: ["Git", "GitHub", "SCRUM/Agile"],
+    },
+  ],
+
+  projects: [
+    {
+      tags: "React",
+      image:
+        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
+      title: "React Project 1",
+      caption: "A short Description",
+      description: "This is my project description. Please fill it in.",
+      links: [
+        { link: "https://www.google.com", icon: <YouTube /> },
+        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <Language /> },
+      ],
+    },
+    {
+      tags: "React",
+      image:
+        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
+      title: "React Project 2",
+      caption: "A short Description",
+      description: "This is my project description. Please fill it in.",
+      links: [
+        { link: "https://www.google.com", icon: <YouTube /> },
+        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <Language /> },
+      ],
+    },
+    {
+      tags: "Python",
+      image:
+        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
+      title: "Python Project 1",
+      caption: "A short Description",
+      description: "This is my project description. Please fill it in.",
+      links: [
+        { link: "https://www.google.com", icon: <YouTube /> },
+        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <Language /> },
+      ],
+    },
+    {
+      tags: "Java",
+      image:
+        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
+      title: "Java Project 1",
+      caption: "A short Description",
+      description: "This is my project description. Please fill it in.",
+      links: [
+        { link: "https://www.google.com", icon: <YouTube /> },
+        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <Language /> },
+      ],
     },
   ],
 };
