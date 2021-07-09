@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { HomeRounded, Telegram } from "@material-ui/icons";
@@ -9,8 +9,10 @@ import "./Header.css";
 
 const Header = (props) => {
   const pathName = props?.location?.pathname;
+  const [expanded, setExpanded] = useState(false);
+
   return (
-    <Navbar expand="lg" sticky="top" className="header">
+    <Navbar expand="lg" sticky="top" className="header" expanded={expanded}>
       {/* Home link */}
       <Nav.Link as={NavLink} to="/" className="header_navlink">
         <Navbar.Brand className="header_home">
@@ -18,7 +20,13 @@ const Header = (props) => {
         </Navbar.Brand>
       </Nav.Link>
 
-      <Navbar.Toggle />
+      <Navbar.Toggle
+        onClick={() =>
+          setTimeout(() => {
+            setExpanded(expanded ? false : "expanded");
+          }, 150)
+        }
+      />
 
       <Navbar.Collapse>
         <Nav className="header_left">
@@ -27,6 +35,7 @@ const Header = (props) => {
             as={NavLink}
             to="/"
             className={pathName === "/" ? "header_link_active" : "header_link"}
+            onClick={() => setExpanded(false)}
           >
             Resume
           </Nav.Link>
@@ -38,6 +47,7 @@ const Header = (props) => {
             className={
               pathName === "/portfolio" ? "header_link_active" : "header_link"
             }
+            onClick={() => setExpanded(false)}
           >
             Portfolio
           </Nav.Link>
