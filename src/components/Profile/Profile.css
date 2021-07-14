@@ -22,7 +22,7 @@
 }
 
 .profile_image {
-  margin: -10px;
+  margin-right: -10px;
   -webkit-clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
   clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
 }
