@@ -1,4 +1,4 @@
-import { Grid, Paper, Typography } from "@material-ui/core";
+import { Grid, Paper, Tooltip, Typography } from "@material-ui/core";
 import React from "react";
 import resumeData from "../../utils/resumeData";
 import CustomTimeline, {
@@ -214,9 +214,11 @@ const Resume = () => {
                     {/* mapping through the social object */}
                     {Object.keys(resumeData.socials).map((key) => (
                       <Grid item className="contactInfo_social">
-                        <a href={resumeData.socials[key].link}>
-                          {resumeData.socials[key].icon}
-                        </a>
+                        <Tooltip title={resumeData.socials[key].text}>
+                          <a href={resumeData.socials[key].link}>
+                            {resumeData.socials[key].icon}
+                          </a>
+                        </Tooltip>
                       </Grid>
                     ))}
                   </Grid>

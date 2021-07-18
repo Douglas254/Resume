@@ -100,8 +100,14 @@
 }
 
 .contactInfo_social > a > .MuiSvgIcon-root {
-  font-size: 16px !important;
+  font-size: 27px !important;
   margin-right: 10px;
   color: #000;
+}
+
+.contactInfo_social > a > .MuiSvgIcon-root:hover {
+  color: var(--main-color);
+  margin-right: 10px;
+  font-size: 30px !important;
 }
 /*End of contact section */

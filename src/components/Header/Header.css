@@ -48,3 +48,8 @@
   margin-right: 12px;
   color: #000000;
 }
+
+.header .header_right > a > .MuiSvgIcon-root:hover {
+  font-size: 19px !important;
+  color: var(--main-color);
+}

@@ -5,6 +5,7 @@ import { HomeRounded, Telegram } from "@material-ui/icons";
 import { NavLink, withRouter } from "react-router-dom";
 import resumeData from "../../utils/resumeData";
 import CustomButton from "../Button/Button";
+import { Tooltip } from "@material-ui/core";
 import "./Header.css";
 
 const Header = (props) => {
@@ -54,15 +55,19 @@ const Header = (props) => {
         </Nav>
 
         <div className="header_right">
-          {/* mappinf through the object  */}
+          {/* mapping through the object  */}
           {Object.keys(resumeData.socials).map((key) => (
-            <a
-              href={resumeData.socials[key].link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {resumeData.socials[key].icon}
-            </a>
+            <Tooltip title={resumeData.socials[key].text}>
+              <a
+                href={resumeData.socials[key].link}
+                target="_blank"
+                rel="noreferrer"
+                data-toggle="tooltip"
+                data-content={resumeData.socials[key].text}
+              >
+                {resumeData.socials[key].icon}
+              </a>
+            </Tooltip>
           ))}
 
           <CustomButton text={"Hire Me"} icon={<Telegram />} />
