@@ -10,6 +10,7 @@ import Resume from "./pages/Resume/Resume";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </Grid>
         <Grid item xs>
           <Router>
+            <ScrollToTop />
             <Header />
             <div className="main_content container_shadow">
               <Switch>
