@@ -111,3 +111,19 @@
   font-size: 30px !important;
 }
 /*End of contact section */
+
+.material-design-icon {
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.contact {
+  text-decoration: none;
+  color: #787878;
+  margin-left: 7px;
+}
+
+.contact-address {
+  color: #787878 !important;
+  margin-left: 7px;
+}

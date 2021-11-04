@@ -18,3 +18,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.MuiGrid-spacing-xs-3 > .MuiGrid-item {
+  padding: 12px;
+  width: 330px;
+}

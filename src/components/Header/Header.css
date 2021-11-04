@@ -32,6 +32,7 @@
 .header .header_link_active {
   font-weight: 500;
   color: var(--main-color) !important;
+  border-bottom: 0.1px solid;
 }
 
 .header .header_left {
@@ -39,8 +40,8 @@
 }
 
 .header .header_right {
-  display: flex !important;
-  align-items: center !important;
+  display: flex;
+  align-items: center;
 }
 
 .header .header_right > a > .MuiSvgIcon-root {
@@ -52,4 +53,10 @@
 .header .header_right > a > .MuiSvgIcon-root:hover {
   font-size: 19px !important;
   color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  .header .header_right {
+    display: none;
+  }
 }

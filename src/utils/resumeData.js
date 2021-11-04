@@ -1,13 +1,14 @@
-import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import {
-  AssignmentOutlined,
+  Facebook,
+  Twitter,
+  LinkedIn,
+  GitHub,
+  ScreenSearchDesktop,
+  SettingsApplications,
   Language,
-  WebOutlined,
+  Web,
   YouTube,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 
 const resumeData = {
   name: "Douglas Obara",
@@ -15,9 +16,10 @@ const resumeData = {
 
   birthday: "30th July 1997",
   email: "douglasobara97@gmail.com",
+  mailto: "mailto:douglasobara97@gmail.com",
   address: "8303 - 00200 , Kibera Drive.",
   phone: "(+254)7 42 608 717",
-
+  tel: "tel:+254742608717",
   about:
     "Hello!, My name is Douglas Obara student at Kabarak University hounding Bachelor of Science in Information Technology(BSc IT),this where i was introduced to the Web Application Programming and since then i developed interest in building web application projects and work with some machine learning models algorithms when i was studying DataScience.I am a Front-end Web Developer.I just fell in love with ReactJs as my favourite library/framework for front-end technology.\n\nCurrently i am learning Java Platform, Enterprise Edition (Java EE) which i found it useful and good to know when i was introduced to HealthIT Systems since it is the technology stack used in the KenyaEMR system, which is based on OpenMRS and many more systems by KabarakHealthIT student innovation hub(iHub) mentors for us to be able to deploy the system to various facilities at County level and even customize to meet the requirements of the facility that the system is being deployed.I always believe in myself in all that i do since am a goal-driven mindset person and passionate for learning new technology that arises in order to solve problems and drive the organization towards achieving its goals, objective ~ effectively & efficiently.I like reading, coding, research, hiking, listening to Music and dancing to the tune.",
 
@@ -25,22 +27,22 @@ const resumeData = {
     Facebook: {
       link: "https://web.facebook.com/douglas.omwando.92/",
       text: "MyFacebook",
-      icon: <FacebookIcon />,
+      icon: <Facebook />,
     },
     Twitter: {
       link: "https://twitter.com/Douglas__Obara",
       text: "MyTwitter",
-      icon: <TwitterIcon />,
+      icon: <Twitter />,
     },
     LinkedIn: {
       link: "https://www.linkedin.com/in/douglas-obara/",
       text: "MyLinkedin",
-      icon: <LinkedInIcon />,
+      icon: <LinkedIn />,
     },
     GitHub: {
       link: "https://github.com/douglas254",
       text: "MyGithub",
-      icon: <GitHubIcon />,
+      icon: <GitHub />,
     },
   },
 
@@ -57,8 +59,7 @@ const resumeData = {
     {
       title: "KABARAK UNIVERSITY",
       date: "May 2018 - Present",
-      description:
-        "Bachelor of Science in Information Technology (BSc IT)",
+      description: "Bachelor of Science in Information Technology (BSc IT)",
     },
     {
       title: "ST. JOHN'S NYAMAGWA BOYS HIGH SCHOOL",
@@ -76,40 +77,37 @@ const resumeData = {
 
   services: [
     {
-      title: "Web Development",
-      description: "i have experience in website development",
-      icon: <WebOutlined />,
-    },
-    {
-      title: "Branding Identity",
+      title: "Web Design/Development",
       description:
-        "We will make you a brand that is catchy and leaves a trace.",
-      icon: <AssignmentOutlined />,
+        "I have experience in website development and thus i can write code, update websites, design layouts, edit website content and make adjustments based on the client feedback.",
+      icon: <Web />,
     },
     {
-      title: "Illustrator",
-      description: "I have been working on illustration design for 6 years.",
-      icon: <WebOutlined />,
+      title: "Web Maintenance",
+      description:
+        "This is to take care of your web maintenance duties so that you can concentrate in running your business and attending to core duties.",
+      icon: <SettingsApplications />,
+    },
+    {
+      title: "SEO",
+      description:
+        "I can improve the quality and quantity of your website traffic or a web page from search engines.",
+      icon: <ScreenSearchDesktop />,
     },
   ],
 
   skills: [
     {
       title: "FRONT-END",
-      description: [
-        "ReactJS",
-        "Javascript",
-        "Bootstrap",
-        "Material UI",
-      ],
+      description: ["ReactJS", "Javascript", "Bootstrap", "Material UI"],
     },
     {
       title: "BACK-END",
-      description: ["Java", "Python","NodeJS"],
+      description: ["Java", "Python", "NodeJS"],
     },
     {
       title: "DATABASES",
-      description: ["MySQL","PostgreSQL", "MongoDB","Firebase"],
+      description: ["MySQL", "PostgreSQL", "MongoDB", "Firebase"],
     },
     {
       title: "SOURCE CONTROL",
@@ -127,7 +125,7 @@ const resumeData = {
       description: "This is my project description. Please fill it in.",
       links: [
         { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <GitHub /> },
         { link: "https://www.google.com", icon: <Language /> },
       ],
     },
@@ -140,7 +138,7 @@ const resumeData = {
       description: "This is my project description. Please fill it in.",
       links: [
         { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <GitHub /> },
         { link: "https://www.google.com", icon: <Language /> },
       ],
     },
@@ -153,7 +151,7 @@ const resumeData = {
       description: "This is my project description. Please fill it in.",
       links: [
         { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <GitHub /> },
         { link: "https://www.google.com", icon: <Language /> },
       ],
     },
@@ -166,7 +164,7 @@ const resumeData = {
       description: "This is my project description. Please fill it in.",
       links: [
         { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHubIcon /> },
+        { link: "https://www.google.com", icon: <GitHub /> },
         { link: "https://www.google.com", icon: <Language /> },
       ],
     },

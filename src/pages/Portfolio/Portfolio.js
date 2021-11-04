@@ -24,7 +24,7 @@ const Portfolio = () => {
   const [ProjectDialog, setProjectDialog] = useState(false);
 
   return (
-    <div container spacing={1} className="section pt_45 pb_45">
+    <div container spacing={4} className="section pt_45 pb_45">
       {/* Title  */}
       <Grid item xs={12} className="section_title mb_30">
         <span></span>

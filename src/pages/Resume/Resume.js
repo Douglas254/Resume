@@ -11,6 +11,9 @@ import "./Resume.css";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import { TimelineContent, TimelineDot } from "@material-ui/lab";
 import { TextField } from "@material-ui/core";
+import RoomIcon from "@mui/icons-material/Room";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Resume = () => {
   return (
@@ -191,20 +194,35 @@ const Resume = () => {
               <Grid container>
                 <Grid item xs={12}>
                   <Typography className="contactInfo_item">
-                    <span>Adress: </span>
-                    {resumeData.address}
+                    <span>
+                      <RoomIcon className="material-design-icon" />
+                      Adress:
+                    </span>
+                    <span className="contact-address">
+                      {resumeData.address}
+                    </span>
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography className="contactInfo_item">
-                    <span>Phone: </span>
-                    {resumeData.phone}
+                    <span>
+                      <PhoneIcon className="material-design-icon" />
+                      Phone:
+                    </span>
+                    <a className="contact" href={resumeData.tel}>
+                      {resumeData.phone}
+                    </a>
                   </Typography>
                 </Grid>
                 <Grid item xs={12}>
                   <Typography className="contactInfo_item">
-                    <span>Email: </span>
-                    {resumeData.email}
+                    <span>
+                      <EmailIcon className="material-design-icon" />
+                      Email:
+                    </span>
+                    <a className="contact" href={resumeData.mailto}>
+                      {resumeData.email}
+                    </a>
                   </Typography>
                 </Grid>
 
