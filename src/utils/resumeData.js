@@ -7,8 +7,12 @@ import {
   SettingsApplications,
   Language,
   Web,
-  YouTube,
 } from "@mui/icons-material";
+import image1 from "../assets/projects/covid-19-tracker.jpg";
+import image2 from "../assets/projects/Restaurant-Website.jpg";
+import image3 from "../assets/projects/Travel-Agency-Website.jpg";
+import image4 from "../assets/projects/diabetes-prediction.jpg";
+import image5 from "../assets/projects/douglasobara-github.jpg";
 
 const resumeData = {
   name: "Douglas Obara",
@@ -118,54 +122,86 @@ const resumeData = {
   projects: [
     {
       tags: "React",
-      image:
-        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
-      title: "React Project 1",
-      caption: "A short Description",
-      description: "This is my project description. Please fill it in.",
+      image: image1,
+      title: "Covid-19-TrackerApp",
+      caption: "Track the covid-19 Victims",
+      description:
+        "Track Covid-19 numbers all across the world displaying ~ Confirmed Cases, Deaths, New & Recovered Cases using the Covid-19 API",
       links: [
-        { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://github.com/Douglas254/Covid-19-TrackerApp",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://covid-19-trackerweb.netlify.app/",
+          icon: <Language />,
+        },
       ],
     },
     {
       tags: "React",
-      image:
-        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
-      title: "React Project 2",
-      caption: "A short Description",
-      description: "This is my project description. Please fill it in.",
+      image: image2,
+      title: "Restaurant Website",
+      caption: "Website for your restaurant",
+      description:
+        "This is my project that i build while studying Front-End Web UI Frameworks and Tools:Bootstrap 4 on Coursera.",
       links: [
-        { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://github.com/Douglas254/Restaurant-Website",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://ristorante-con-fusion-web.netlify.app",
+          icon: <Language />,
+        },
       ],
     },
     {
-      tags: "Python",
-      image:
-        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
-      title: "Python Project 1",
-      caption: "A short Description",
-      description: "This is my project description. Please fill it in.",
+      tags: "React",
+      image: image3,
+      title: "Travel Agency Website",
+      caption: "Website for your travels",
+      description:
+        "This was my first project that i build when i started learning ReactJs Front-End library ",
       links: [
-        { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://github.com/Douglas254/Travel-Agency-Website",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://travel-agency-web.netlify.app/",
+          icon: <Language />,
+        },
       ],
     },
     {
-      tags: "Java",
-      image:
-        "https://www.cce.csus.edu/sites/main/files/main-images/camera_lense_0.jpeg",
-      title: "Java Project 1",
-      caption: "A short Description",
-      description: "This is my project description. Please fill it in.",
+      tags: "DataScience/AI",
+      image: image4,
+      title: "Diabetes Prediction",
+      caption: "With the best model Accuracy Score of 0.7965 (0.80%)",
+      description:
+        "Predict whether a patient has diabetes or not, based on certain diagnostic measurements included in the dataset. 0 – Absence of Diabetes 1 – Presence of Diabetes",
       links: [
-        { link: "https://www.google.com", icon: <YouTube /> },
-        { link: "https://www.google.com", icon: <GitHub /> },
-        { link: "https://www.google.com", icon: <Language /> },
+        {
+          link: "https://github.com/Douglas254/Machine-Learning-Projects/blob/master/Diabetes-Prediction/DiabetesPrediction.ipynb",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://github.com/Douglas254/Machine-Learning-Projects/blob/master/Diabetes-Prediction/DiabetesPrediction.ipynb",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "Others",
+      image: image5,
+      caption: "More Projects Found Here ",
+      description: "Check GitHub for more project",
+      links: [
+        {
+          link: "https://github.com/Douglas254?tab=repositories",
+          icon: <GitHub />,
+        },
       ],
     },
   ],
