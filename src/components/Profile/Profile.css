@@ -72,3 +72,7 @@
   justify-content: center;
   margin-top: 10px;
 }
+
+#resumelink {
+  text-decoration: none;
+}
