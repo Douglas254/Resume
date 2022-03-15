@@ -14,8 +14,15 @@ import { TextField } from "@material-ui/core";
 import RoomIcon from "@mui/icons-material/Room";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import { useForm } from "react-hook-form";
 
 const Resume = () => {
+  const {
+    register,
+    formState: { errors },
+    trigger,
+  } = useForm();
+
   return (
     <React.Fragment>
       {/* About Me  */}
@@ -158,28 +165,87 @@ const Resume = () => {
               <h6 className="section_title_text">Contact Form</h6>
             </Grid>
 
-            <Grid item xs={12}>
-              <Grid container spacing={3}>
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="name" label="Name" />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="email" label="Email" />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    fullWidth
-                    name="message"
-                    label="Message"
-                    multiline
-                    rows={4}
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <CustomButton text="Submit" />
+            <form className="form" method="POST">
+              <Grid item xs={12}>
+                <Grid container spacing={3}>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      name="name"
+                      {...register("name", {
+                        required: "Name is Required",
+                        pattern: {
+                          value: /^[A-Za-z]+$/,
+                          message: "",
+                        },
+                      })}
+                      onKeyUp={() => {
+                        trigger("name");
+                      }}
+                      label="Name"
+                      required
+                    />
+                    {errors.name && (
+                      <small className="text-danger">
+                        {errors.name.message}
+                      </small>
+                    )}
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <TextField
+                      fullWidth
+                      name="email"
+                      {...register("email", {
+                        required: "Email is Required",
+                        pattern: {
+                          value:
+                            /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                          message: "Invalid email address",
+                        },
+                      })}
+                      onKeyUp={() => {
+                        trigger("email");
+                      }}
+                      label="Email"
+                      required
+                    />
+                    {errors.email && (
+                      <small className="text-danger">
+                        {errors.email.message}
+                      </small>
+                    )}
+                  </Grid>
+                  <Grid item xs={12}>
+                    <TextField
+                      fullWidth
+                      name="message"
+                      {...register("message", {
+                        required: "Message is Required",
+                        minLength: {
+                          value: 10,
+                          message: "Minimum Required length is 10",
+                        },
+                      })}
+                      onKeyUp={() => {
+                        trigger("message");
+                      }}
+                      label="Message"
+                      multiline
+                      rows={4}
+                      required
+                    />
+                    {errors.message && (
+                      <small className="text-danger">
+                        {errors.message.message}
+                      </small>
+                    )}
+                  </Grid>
+                  <Grid item xs={12}>
+                    <CustomButton text="Submit" type="submit" />
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
+            </form>
           </Grid>
         </Grid>
 
