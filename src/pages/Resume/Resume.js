@@ -165,7 +165,12 @@ const Resume = () => {
               <h6 className="section_title_text">Contact Form</h6>
             </Grid>
 
-            <form className="form" method="POST">
+            <form
+              className="form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+            >
               <Grid item xs={12}>
                 <Grid container spacing={3}>
                   <Grid item xs={12} sm={6}>
