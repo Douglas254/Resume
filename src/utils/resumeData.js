@@ -13,6 +13,7 @@ import image2 from "../assets/projects/Restaurant-Website.jpg";
 import image3 from "../assets/projects/Travel-Agency-Website.jpg";
 import image4 from "../assets/projects/diabetes-prediction.jpg";
 import image5 from "../assets/projects/douglasobara-github.jpg";
+import image6 from "../assets/projects/fredouwebtech.jpg";
 
 const resumeData = {
   name: "Douglas Obara",
@@ -120,6 +121,23 @@ const resumeData = {
   ],
 
   projects: [
+    {
+      tags: "React",
+      image: image6,
+      title: "Fredouweb Technologies",
+      caption: "Fredouwebtech Website",
+      description: "This the first website to deploy to production",
+      links: [
+        {
+          link: "https://fredouwebtech.netlify.app/",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://fredouwebtech.com/",
+          icon: <Language />,
+        },
+      ],
+    },
     {
       tags: "React",
       image: image1,
