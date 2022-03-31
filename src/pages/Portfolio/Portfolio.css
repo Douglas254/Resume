@@ -13,6 +13,12 @@
   outline-width: 0px !important;
 }
 
+@media (max-width: 560px) {
+  .tabs {
+    display: none;
+  }
+}
+
 /* End of Tabs  */
 
 /* Cards */

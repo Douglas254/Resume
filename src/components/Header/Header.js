@@ -69,8 +69,9 @@ const Header = (props) => {
               </a>
             </Tooltip>
           ))}
-
-          <CustomButton text={"Hire Me"} icon={<Telegram />} />
+          <a className="contact" href={resumeData.mailto}>
+            <CustomButton text={"Hire Me"} icon={<Telegram />} />
+          </a>
         </div>
       </Navbar.Collapse>
     </Navbar>

@@ -14,6 +14,8 @@ import image3 from "../assets/projects/Travel-Agency-Website.jpg";
 import image4 from "../assets/projects/diabetes-prediction.jpg";
 import image5 from "../assets/projects/douglasobara-github.jpg";
 import image6 from "../assets/projects/fredouwebtech.jpg";
+import image7 from "../assets/projects/ecommercewordpress.jpg";
+import image8 from "../assets/projects/ecommercelaravel.jpg";
 
 const resumeData = {
   name: "Douglas Obara",
@@ -207,6 +209,34 @@ const resumeData = {
         {
           link: "https://github.com/Douglas254/Machine-Learning-Projects/blob/master/Diabetes-Prediction/DiabetesPrediction.ipynb",
           icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "PHP/Laravel",
+      image: image8,
+      title: "E-Commerce-Laravel",
+      caption: "built with laravel php-framework(Backend)",
+      description:
+        "E-Commerce Website built with laravel php-framework(Backend)",
+      links: [
+        {
+          link: "https://github.com/Douglas254/Ecommerce-Laravel",
+          icon: <GitHub />,
+        },
+      ],
+    },
+    {
+      tags: " Wordpress",
+      image: image7,
+      title: "E-Commerce Wordpress",
+      caption:
+        "Find one for your online store and manage product your products",
+      description: "Full functioning app with the M~pesa and DPO Integration",
+      links: [
+        {
+          link: "https://github.com/Douglas254/Ecommerce-wordpress",
+          icon: <GitHub />,
         },
       ],
     },

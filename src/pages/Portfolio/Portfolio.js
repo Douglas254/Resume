@@ -32,7 +32,7 @@ const Portfolio = () => {
       </Grid>
 
       {/* Tabs */}
-      <Grid item xs={12}>
+      <Grid item xs={12} className="tabs">
         <Tabs
           value={tabValue}
           indicatorColor="white"
