@@ -28,7 +28,7 @@ const resumeData = {
   phone: "(+254)7 42 608 717",
   tel: "tel:+254742608717",
   about:
-    "Hello!, My name is Douglas Obara student at Kabarak University hounding Bachelor of Science in Information Technology(BSc IT),this where i was introduced to the Web Application Programming and since then i developed interest in building web application projects and work with some machine learning models algorithms when i was studying DataScience.I am a Front-end Web Developer.I just fell in love with ReactJs as my favourite library/framework for front-end technology.\n\nCurrently i am looking for attachment opportunity for (May - August) period to finalize my undergraduate studies and upskill.I always believe in myself in all that i do since am a goal-driven mindset person and passionate for learning new technology that arises in order to solve problems and drive the organization towards achieving its goals, objective ~ effectively & efficiently.I like reading, coding, research, hiking, listening to Music and dancing to the tune.",
+    "Hello!, My name is Douglas Obara student at Kabarak University hounding Bachelor of Science in Information Technology(BSc IT),this where i was introduced to the Web Application Programming and since then i developed interest in building web application projects and work with some machine learning models algorithms when i was studying DataScience.I am a Front-End Developer.I just fell in love with ReactJs as my favourite JavaScript library for front-end technology.\n\nCurrently, I'm searching for a position where I may advance in my profession and learn new skills. I always believe in myself in everything I do since I am a goal-oriented person that is eager to learn new technology in order to solve problems and help the organization achieve its goals and objectives successfully and efficiently. Reading, coding, research, hiking, listening to music, and dancing to the beat are some of my favorite activities.",
 
   socials: {
     Facebook: {
@@ -54,6 +54,12 @@ const resumeData = {
   },
 
   experiences: [
+    {
+      title: "Web Developer @Machini Technologies",
+      date: "May 2022 - Present",
+      description:
+        "This is where I optimize the user experience by building and maintaining the user interface, as well as developing usable web and mobile applications.",
+    },
     {
       title: "Technical Support @WOFAK",
       date: "Jan 2020 - Dec 2020",
@@ -110,7 +116,7 @@ const resumeData = {
     },
     {
       title: "BACK-END",
-      description: ["Java", "Python", "NodeJS"],
+      description: ["PHP", "Python", "NodeJS", "Java"],
     },
     {
       title: "DATABASES",
