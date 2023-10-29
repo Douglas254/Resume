@@ -13,20 +13,20 @@ import CustomButton from "../Button/Button";
 import GetApp from "@material-ui/icons/GetApp";
 
 // function to dislay the timeline items on the profile section
-const CustomTimelineItem = ({ title, text, link }) => (
+const CustomTimelineItem = ({ title, text, socialLinkEndpoint, link }) => (
   <TimelineItem>
     <CustomTimelineSeparator />
     <TimelineContent className="timeline_content">
       {link ? (
         <Typography className="timelineItem_text">
-          <span>{title}:</span>
+          <span>{title}:</span> &nbsp;
           <a href={link} target="_blank" rel="noreferrer">
-            {text}
+            {socialLinkEndpoint}
           </a>
         </Typography>
       ) : (
         <Typography className="timelineItem_text">
-          <span>{title}:</span>
+          <span>{title}:</span>&nbsp;
           {text}
         </Typography>
       )}
@@ -53,14 +53,14 @@ const Profile = () => {
         <CustomTimeline icon={<PersonOutlineOutlined />}>
           {/* calling CustomTimelineItem function */}
           <CustomTimelineItem title="Name" text={resumeData.name} />
-          <CustomTimelineItem title="Birthday" text={resumeData.birthday} />
+          {/* <CustomTimelineItem title="Birthday" text={resumeData.birthday} /> */}
           <CustomTimelineItem title="Title" text={resumeData.title} />
           <CustomTimelineItem title="Email" text={resumeData.email} />
           {/* { mapping through socials object} */}
           {Object.keys(resumeData.socials).map((key) => (
             <CustomTimelineItem
               title={key}
-              text={resumeData.socials[key].text}
+              socialLinkEndpoint={resumeData.socials[key].socialLinkEndpoint}
               link={resumeData.socials[key].link}
             />
           ))}

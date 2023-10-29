@@ -51,8 +51,8 @@ const Resume = () => {
             <Grid item sm={12} md={6}>
               <CustomTimeline title="Work Experience" icon={<WorkIcon />}>
                 {/* mapping through the array */}
-                {resumeData.experiences.map((experience) => (
-                  <TimelineItem>
+                {resumeData.experiences.map((experience, index) => (
+                  <TimelineItem key={index}>
                     <CustomTimelineSeparator />
                     <TimelineContent className="timeline_content">
                       <Typography className="timeline_title">
@@ -301,10 +301,13 @@ const Resume = () => {
                 <Grid item xs={12}>
                   <Grid container className="contactInfo_socialsContainer">
                     {/* mapping through the social object */}
-                    {Object.keys(resumeData.socials).map((key) => (
-                      <Grid item className="contactInfo_social">
+                    {Object.keys(resumeData.socials).map((key, index) => (
+                      <Grid item className="contactInfo_social" key={index}>
                         <Tooltip title={resumeData.socials[key].text}>
-                          <a href={resumeData.socials[key].link}>
+                          <a
+                            className="social-link-footer"
+                            href={resumeData.socials[key].link}
+                          >
                             {resumeData.socials[key].icon}
                           </a>
                         </Tooltip>

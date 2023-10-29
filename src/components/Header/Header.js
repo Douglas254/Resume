@@ -56,14 +56,15 @@ const Header = (props) => {
 
         <div className="header_right">
           {/* mapping through the object  */}
-          {Object.keys(resumeData.socials).map((key) => (
-            <Tooltip title={resumeData.socials[key].text}>
+          {Object.keys(resumeData.socials).map((key, index) => (
+            <Tooltip title={resumeData.socials[key].text} key={index}>
               <a
                 href={resumeData.socials[key].link}
                 target="_blank"
                 rel="noreferrer"
                 data-toggle="tooltip"
                 data-content={resumeData.socials[key].text}
+                className="social-link"
               >
                 {resumeData.socials[key].icon}
               </a>

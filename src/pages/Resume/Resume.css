@@ -103,6 +103,7 @@
   font-size: 27px !important;
   margin-right: 10px;
   color: #000;
+  max-width: 25px;
 }
 
 .contactInfo_social > a > .MuiSvgIcon-root:hover {

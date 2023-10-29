@@ -24,7 +24,8 @@
 /* Cards */
 .customCard {
   height: 100%;
-  max-width: 350px;
+  max-width: 400px;
+  /* min-width: 350px; */
   box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08) !important;
   border-radius: 5px;
   overflow: hidden;
@@ -37,6 +38,13 @@
 
 .customCard .customCard_title {
   font-weight: 500;
+}
+
+.modal_title {
+  font-weight: 800 !important;
+}
+.customCard_caption {
+  font-size: 13px !important;
 }
 /*End of Cards */
 
@@ -72,3 +80,13 @@
 }
 
 /* End of Dialog  */
+
+@media (max-width: 768px) {
+  .customCard {
+    max-width: 650px;
+  }
+}
+
+.social-link {
+  max-width: 25px;
+}

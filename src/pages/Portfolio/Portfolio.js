@@ -49,8 +49,9 @@ const Portfolio = () => {
 
           {/* mapping through the project array using `set` in javascript */}
           {[...new Set(resumeData.projects.map((item) => item.tags))].map(
-            (tag) => (
+            (tag, index) => (
               <Tab
+                key={index}
                 label={tag}
                 value={tag}
                 className={
@@ -65,12 +66,12 @@ const Portfolio = () => {
       </Grid>
 
       {/* Projects */}
-      <Grid item xs={12}>
-        <Grid container spacing={3}>
-          {resumeData.projects.map((project) => (
-            <React.Fragment>
+      <Grid item xs={12} className="projects-card">
+        <Grid container spacing={4} className="project-container">
+          {resumeData.projects.map((project, index) => (
+            <React.Fragment key={index}>
               {tabValue === project.tags || tabValue === "All" ? (
-                <Grid item>
+                <Grid item xs={12} lg={6}>
                   <Grow in timeout={1000}>
                     <Card
                       className="customCard"
@@ -109,7 +110,10 @@ const Portfolio = () => {
           open={ProjectDialog}
           onClose={() => setProjectDialog(false)}
         >
-          <DialogTitle onClose={() => setProjectDialog(false)}>
+          <DialogTitle
+            onClose={() => setProjectDialog(false)}
+            className="modal_title"
+          >
             {ProjectDialog.title}
           </DialogTitle>
           <img
@@ -123,8 +127,9 @@ const Portfolio = () => {
             </Typography>
           </DialogContent>
           <DialogActions className="projectDialog_actions">
-            {ProjectDialog?.links?.map((link) => (
+            {ProjectDialog?.links?.map((link, index) => (
               <a
+                key={index}
                 href={link.link}
                 target="_blank"
                 rel="noreferrer"
