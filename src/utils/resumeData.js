@@ -1,64 +1,82 @@
 import {
-  Facebook,
   Twitter,
   LinkedIn,
   GitHub,
-  ScreenSearchDesktop,
   SettingsApplications,
   Language,
-  Web,
+  AcUnit,
+  ViewAgenda,
+  Code,
 } from "@mui/icons-material";
-import image1 from "../assets/projects/covid-19-tracker.jpg";
-import image2 from "../assets/projects/Restaurant-Website.jpg";
-import image3 from "../assets/projects/Travel-Agency-Website.jpg";
-import image4 from "../assets/projects/diabetes-prediction.jpg";
-import image5 from "../assets/projects/douglasobara-github.jpg";
-import image6 from "../assets/projects/fredouwebtech.jpg";
-import image7 from "../assets/projects/ecommercewordpress.jpg";
-import image8 from "../assets/projects/ecommercelaravel.jpg";
+
+import covid19tracker from "../assets/projects/covid-19-tracker.jpg";
+import restaurantwebsite from "../assets/projects/Restaurant-Website.jpg";
+import travelagencywebsite from "../assets/projects/Travel-Agency-Website.jpg";
+import diabetesprediction from "../assets/projects/diabetes-prediction.jpg";
+import douglasobaragithub from "../assets/projects/douglasobara-github.png";
+import fredouwebtech from "../assets/projects/fredouwebtech.jpg";
+import ecommercewordpress from "../assets/projects/ecommercewordpress.jpg";
+import ecommercelaravel from "../assets/projects/ecommercelaravel.jpg";
+import projectspro from "../assets/projects/projectspro.png";
+import nikestorecommerce from "../assets/projects/nikestorecommerce.png";
+import inuaukulima from "../assets/projects/inuaukulima.png";
+import kenyadnsforum from "../assets/projects/kenyadnsforum.png";
+import sliquorstore from "../assets/projects/sliquorstore.png";
+import managelandingpage from "../assets/projects/managelandingpage.png";
+import cuisinedishes from "../assets/projects/cuisinedishes.png";
+import astro from "../assets/projects/astro.png";
+import parceldeliveriesadministration from "../assets/projects/parceldeliveriesadministration.png";
 
 const resumeData = {
   name: "Douglas Obara",
-  title: "Web Developer",
-
-  birthday: "30th July 1997",
+  title: "Software Engineer",
   email: "douglasobara97@gmail.com",
   mailto: "mailto:douglasobara97@gmail.com",
   address: "8303 - 00200 , Kibera Drive.",
   phone: "(+254)7 42 608 717",
   tel: "tel:+254742608717",
   about:
-    "Hello!, My name is Douglas Obara student at Kabarak University hounding Bachelor of Science in Information Technology(BSc IT),this where i was introduced to the Web Application Programming and since then i developed interest in building web application projects and work with some machine learning models algorithms when i was studying DataScience.I am a Front-End Developer.I just fell in love with ReactJs as my favourite JavaScript library for front-end technology.\n\nCurrently, I'm searching for a position where I may advance in my profession and learn new skills. I always believe in myself in everything I do since I am a goal-oriented person that is eager to learn new technology in order to solve problems and help the organization achieve its goals and objectives successfully and efficiently. Reading, coding, research, hiking, listening to music, and dancing to the beat are some of my favorite activities.",
+    "Hello 👋, I'm Douglas Obara. With a solid educational background in Information Technology, holding a Bachelor's degree, Information Technology (BSc in IT), and having honed my skills through a rigorous program in Software Engineering at Moringa School, I bring a unique blend of theoretical knowledge and practical expertise. My passion lies in leveraging technology to solve complex problems and streamline processes. \n\n With a keen eye for detail and a strong aptitude for innovative solutions, I am equipped to contribute significantly to any software development team. I am eager to apply my skills and contribute to a dynamic organization looking to make a meaningful impact in the tech industry.",
 
   socials: {
-    Facebook: {
-      link: "https://web.facebook.com/douglas.omwando.92/",
-      text: "MyFacebook",
-      icon: <Facebook />,
-    },
     Twitter: {
       link: "https://twitter.com/Douglas__Obara",
-      text: "MyTwitter",
+      text: "Twitter",
+      socialLinkEndpoint: "@Douglas__Obara",
       icon: <Twitter />,
     },
     LinkedIn: {
-      link: "https://www.linkedin.com/in/douglas-obara/",
-      text: "MyLinkedin",
+      link: "https://www.linkedin.com/in/douglas-obara",
+      text: "Linkedin",
+      socialLinkEndpoint: "in/douglas-obara",
       icon: <LinkedIn />,
     },
     GitHub: {
       link: "https://github.com/douglas254",
-      text: "MyGithub",
+      text: "Github",
+      socialLinkEndpoint: "douglas254",
       icon: <GitHub />,
     },
   },
 
   experiences: [
     {
-      title: "Web Developer @Machini Technologies",
-      date: "May 2022 - Present",
+      title: "Frontend Engineer @CodeAfrika Business Solutions Limited",
+      date: "Jun 2022 - Present",
       description:
-        "This is where I optimize the user experience by building and maintaining the user interface, as well as developing usable web and mobile applications.",
+        "My role involves implementing the visual and interactive elements of websites or applications. I collaborate closely with UI/UX designers, utilizing modern technologies like React to create user-friendly interfaces. Ensuring cross-browser compatibility and optimizing web performance which are crucial aspects of my work. I also integrate frontend with backend APIs, address technical issues, and stay updated with the latest frontend trends and best practices to continually improve my skill set.",
+    },
+    {
+      title: "Web Developer @Machini Technologies",
+      date: "May 2022 - Jun 2022",
+      description:
+        "Optimize the user experience by building and maintaining the user interface, as well as developing usable web applications.",
+    },
+    {
+      title: "Frontend Engineer @Side Hustle",
+      date: "Apr 2022 - May 2022",
+      description:
+        "Optimize the user experience by building and maintaining the user interface, as well as developing usable web applications.",
     },
     {
       title: "Technical Support @WOFAK",
@@ -67,11 +85,21 @@ const resumeData = {
         "Assisted the staff on the technical aspect of the operation in their machines and made sure the system is running as well and troubleshoot the network incase of failure.",
     },
   ],
-
   educations: [
     {
+      title: "MORINGA SCHOOL",
+      date: "May 2022 - Nov 2022",
+      description: "Software Engineering Course",
+    },
+    {
+      title:
+        "QUEENSBOROUGH COMMUNITY COLLEGE OF THE CITY UNIVERSITY OF NEW YORK (CUNY)",
+      date: "May 2022 - Jun 2022",
+      description: "CUNNY/QCC Software Engineering",
+    },
+    {
       title: "KABARAK UNIVERSITY",
-      date: "May 2018 - Present",
+      date: "May 2018 - Apr 2022",
       description: "Bachelor of Science in Information Technology (BSc IT)",
     },
     {
@@ -90,37 +118,45 @@ const resumeData = {
 
   services: [
     {
-      title: "Web Design/Development",
-      description:
-        "I have experience in website development and thus i can write code, update websites, design layouts, edit website content and make adjustments based on the client feedback.",
-      icon: <Web />,
+      title: "Web Developer",
+      description: "⭐⭐⭐⭐⭐",
+      icon: <Code />,
     },
     {
-      title: "Web Maintenance",
-      description:
-        "This is to take care of your web maintenance duties so that you can concentrate in running your business and attending to core duties.",
+      title: "Product UI/UX Designer",
+      description: "⭐⭐⭐⭐⭐",
       icon: <SettingsApplications />,
     },
     {
-      title: "SEO",
-      description:
-        "I can improve the quality and quantity of your website traffic or a web page from search engines.",
-      icon: <ScreenSearchDesktop />,
+      title: "Power Apps Developer",
+      description: "⭐⭐⭐⭐⭐",
+      icon: <ViewAgenda />,
+    },
+    {
+      title: "WordPress Developer",
+      description: "⭐⭐⭐⭐⭐",
+      icon: <AcUnit />,
     },
   ],
 
   skills: [
     {
       title: "FRONT-END",
-      description: ["ReactJS", "Javascript", "Bootstrap", "Material UI"],
+      description: [
+        "JavaScript",
+        "ReactJS",
+        "TailwindCss",
+        "Bootstrap",
+        "Material UI",
+      ],
     },
     {
       title: "BACK-END",
-      description: ["PHP", "Python", "NodeJS", "Java"],
+      description: ["NextJS", "PHP/Laravel", "Python"],
     },
     {
       title: "DATABASES",
-      description: ["MySQL", "PostgreSQL", "MongoDB", "Firebase"],
+      description: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
     },
     {
       title: "SOURCE CONTROL",
@@ -131,10 +167,61 @@ const resumeData = {
   projects: [
     {
       tags: "React",
-      image: image6,
+      image: nikestorecommerce,
+      title: "Nike Store Commerce",
+      caption:
+        "Website that allows someone to buy Nike shoes and look for more Nike shoes with their price tags and description on external links.",
+      description: "",
+      links: [
+        {
+          link: "https://fredouwebtech.netlify.app/",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://nike-store-commercev1.vercel.app/",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "React",
+      image: inuaukulima,
+      title: "Inua Ukulima",
+      caption:
+        "Website that will leverage the artificial intelligence (AI) technologies on farming produce to increase yield.",
+      description: "",
+      links: [
+        {
+          link: "https://inuaukulima.vercel.app/",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "React",
+      image: kenyadnsforum,
+      title: "Kenya DNS Forum",
+      caption:
+        "An annual open event for stakeholders in the Domain Name Industry in East Africa and beyond organized by Kenya Network Information Centre (KeNIC).",
+      description: "",
+      links: [
+        {
+          link: "https://dnsforumreactwebsite.vercel.app",
+          icon: <GitHub />,
+        },
+        {
+          link: "https://dnsforum.ke",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "React",
+      image: fredouwebtech,
       title: "Fredouweb Technologies",
-      caption: "Fredouwebtech Website",
-      description: "This the first website to deploy to production",
+      caption:
+        "Forum that provides Web Design/Development & ICT related Services.",
+      description: "This was my first website to deploy to production",
       links: [
         {
           link: "https://fredouwebtech.netlify.app/",
@@ -148,7 +235,62 @@ const resumeData = {
     },
     {
       tags: "React",
-      image: image1,
+      image: sliquorstore,
+      title: "Sliquor Store",
+      caption:
+        "Is a liquor store website that showcase the products that are available and users can search for the brands that they want and differnt categories offered on the platform.",
+      description: "",
+      links: [
+        {
+          link: "https://liquor-store-eta.vercel.app",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "React",
+      image: cuisinedishes,
+      title: "Cuisine Dishes",
+      caption:
+        "Educates people on how to cook different kinds of foods from different countries, showing them name of the meal, ingredients & instructions on how to cook & video tutorial",
+      description: "",
+      links: [
+        {
+          link: "https://github.com/Douglas254/Phase2-Final-Project",
+          icon: <GitHub />,
+        },
+      ],
+    },
+    {
+      tags: "Astro",
+      image: managelandingpage,
+      title: "Manage Landing Page",
+      caption: "Frontend mentor challenge.",
+      description: "",
+      links: [
+        {
+          link: "https://github.com/Douglas254/Manage-Landing-Page",
+          icon: <GitHub />,
+        },
+      ],
+    },
+    {
+      tags: "Astro",
+      image: astro,
+      title: "Astro Website",
+      caption:
+        "Website that i created while learning Astro which is an all-in-one web framework for building fast, content-focused websites.",
+      description: "",
+      links: [
+        {
+          link: "https://astro-website-self.vercel.app/",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "React",
+      image: covid19tracker,
       title: "Covid-19-TrackerApp",
       caption: "Track the covid-19 Victims",
       description:
@@ -166,7 +308,7 @@ const resumeData = {
     },
     {
       tags: "React",
-      image: image2,
+      image: restaurantwebsite,
       title: "Restaurant Website",
       caption: "Website for your restaurant",
       description:
@@ -184,7 +326,7 @@ const resumeData = {
     },
     {
       tags: "React",
-      image: image3,
+      image: travelagencywebsite,
       title: "Travel Agency Website",
       caption: "Website for your travels",
       description:
@@ -202,7 +344,7 @@ const resumeData = {
     },
     {
       tags: "DataScience/AI",
-      image: image4,
+      image: diabetesprediction,
       title: "Diabetes Prediction",
       caption: "With the best model Accuracy Score of 0.7965 (0.80%)",
       description:
@@ -220,7 +362,7 @@ const resumeData = {
     },
     {
       tags: "PHP/Laravel",
-      image: image8,
+      image: ecommercelaravel,
       title: "E-Commerce-Laravel",
       caption: "built with laravel php-framework(Backend)",
       description:
@@ -234,7 +376,7 @@ const resumeData = {
     },
     {
       tags: " Wordpress",
-      image: image7,
+      image: ecommercewordpress,
       title: "E-Commerce Wordpress",
       caption:
         "Find one for your online store and manage product your products",
@@ -247,8 +389,36 @@ const resumeData = {
       ],
     },
     {
+      tags: "Microsoft",
+      image: projectspro,
+      title: "ProjectsPro",
+      caption:
+        "The ultimate PowerApps streamlined project tracking app. Real-time updates, collaboration, and effortless progress monitoring. Boost productivity, eliminate delays and achieve project success.",
+      description:
+        "The cutting-edge project tracking system using Microsoft's PowerApps is designed to revolutionize Project Management. Targeting the challenges encountered by companies handling multiple projects, the system seeks to replace manual processes, particularly those relying on Excel spreadsheets for tracking project progress.",
+      links: [
+        {
+          link: "https://devpost.com/software/projectspro",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
+      tags: "Microsoft",
+      image: parceldeliveriesadministration,
+      title: "Parcel Delivery Administration",
+      caption: "Power Apps Design Challenge",
+      description: "",
+      links: [
+        {
+          link: "https://www.linkedin.com/feed/update/urn:li:activity:7123295496818806784/",
+          icon: <Language />,
+        },
+      ],
+    },
+    {
       tags: "Others",
-      image: image5,
+      image: douglasobaragithub,
       caption: "More Projects Found Here ",
       description: "Check GitHub for more project",
       links: [
