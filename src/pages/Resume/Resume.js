@@ -1,5 +1,4 @@
 import { Grid, Paper, Tooltip, Typography } from "@material-ui/core";
-import React from "react";
 import resumeData from "../../utils/resumeData";
 import CustomTimeline, {
   CustomTimelineSeparator,
@@ -14,14 +13,65 @@ import { TextField } from "@material-ui/core";
 import RoomIcon from "@mui/icons-material/Room";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-import { useForm } from "react-hook-form";
+import React, { useState, useRef } from "react";
+import Swal from "sweetalert2";
+import emailjs from "@emailjs/browser";
+import { useFormik } from "formik";
+import { contactSchema } from "../../schemas";
+
+const initialValues = {
+  name: "",
+  email: "",
+  message: "",
+};
 
 const Resume = () => {
-  const {
-    register,
-    formState: { errors },
-    trigger,
-  } = useForm();
+  const formRef = useRef();
+  const [loading, setLoading] = useState(false);
+
+  const { values, handleBlur, handleChange, handleSubmit, errors, touched } =
+    useFormik({
+      initialValues,
+      validationSchema: contactSchema,
+      onSubmit: (values, actions) => {
+        console.log(values);
+        setLoading(true);
+
+        emailjs
+          .send(
+            `${process.env.REACT_APP_SERVICE_ID}`,
+            `${process.env.REACT_APP_TEMPLATE_ID}`,
+            {
+              from_name: values.name,
+              to_name: `${process.env.REACT_APP_NAME}`,
+              from_email: values.email,
+              to_email: `${process.env.REACT_APP_EMAIL}`,
+              message: values.message,
+            },
+            `${process.env.REACT_APP_PUBLIC_KEY}`
+          )
+          .then(
+            () => {
+              setLoading(false);
+              Swal.fire(
+                "Thank you 😊. I will get back to you as soon as possible."
+              );
+              actions.resetForm();
+            },
+            (error) => {
+              setLoading(false);
+
+              console.log(error);
+
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong!",
+              });
+            }
+          );
+      },
+    });
 
   return (
     <React.Fragment>
@@ -77,8 +127,8 @@ const Resume = () => {
             <Grid item sm={12} md={6}>
               <CustomTimeline title="Education" icon={<SchoolIcon />}>
                 {/* mapping through the array */}
-                {resumeData.educations.map((education) => (
-                  <TimelineItem>
+                {resumeData.educations.map((education, index) => (
+                  <TimelineItem key={index}>
                     <CustomTimelineSeparator />
                     <TimelineContent className="timeline_content">
                       <Typography className="timeline_title">
@@ -111,8 +161,8 @@ const Resume = () => {
 
         <Grid item xs={12}>
           <Grid container spacing={3} justify="space-around">
-            {resumeData.services.map((service) => (
-              <Grid item xs={12} sm={6} md={3}>
+            {resumeData.services.map((service, index) => (
+              <Grid item xs={12} sm={6} md={3} key={index}>
                 <div className="service">
                   <icon className="service_icon">{service.icon}</icon>
                   <Typography className="service_title" variant="h6">
@@ -133,14 +183,14 @@ const Resume = () => {
         <Grid item xs={12}>
           <Grid container justify="space-between" spacing={3}>
             {/* mapping through the skills array */}
-            {resumeData.skills.map((skill) => (
-              <Grid item xs={12} sm={6} md={3}>
+            {resumeData.skills.map((skill, index) => (
+              <Grid item xs={12} sm={6} md={3} key={index}>
                 <Paper elevation={0} className="skill">
                   <Typography variant="h6" className="skill_title">
                     {skill.title}
                   </Typography>
-                  {skill.description.map((element) => (
-                    <Typography variant="body2" className="skill_description">
+                  {skill.description.map((element,index) => (
+                    <Typography variant="body2" className="skill_description" key={index}>
                       <TimelineDot
                         variant="outlined"
                         className="timeline_dot"
@@ -168,7 +218,8 @@ const Resume = () => {
             <form
               className="form"
               name="contact"
-              method="POST"
+              ref={formRef}
+              onSubmit={handleSubmit}
               data-netlify="true"
             >
               <Grid item xs={12}>
@@ -177,76 +228,48 @@ const Resume = () => {
                     <TextField
                       fullWidth
                       name="name"
-                      {...register("name", {
-                        required: "Name is Required",
-                        pattern: {
-                          value: /^[A-Za-z]+$/,
-                          message: "",
-                        },
-                      })}
-                      onKeyUp={() => {
-                        trigger("name");
-                      }}
                       label="Name"
-                      required
+                      value={values.name}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
                     />
-                    {errors.name && (
-                      <small className="text-danger">
-                        {errors.name.message}
-                      </small>
+                    {errors.name && touched.name && (
+                      <small className="text-danger">{errors.name}</small>
                     )}
                   </Grid>
                   <Grid item xs={12} sm={6}>
                     <TextField
                       fullWidth
                       name="email"
-                      {...register("email", {
-                        required: "Email is Required",
-                        pattern: {
-                          value:
-                            /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                          message: "Invalid email address",
-                        },
-                      })}
-                      onKeyUp={() => {
-                        trigger("email");
-                      }}
                       label="Email"
-                      required
+                      value={values.email}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
                     />
-                    {errors.email && (
-                      <small className="text-danger">
-                        {errors.email.message}
-                      </small>
+                    {errors.email && touched.email && (
+                      <small className="text-danger">{errors.email}</small>
                     )}
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
                       fullWidth
                       name="message"
-                      {...register("message", {
-                        required: "Message is Required",
-                        minLength: {
-                          value: 10,
-                          message: "Minimum Required length is 10",
-                        },
-                      })}
-                      onKeyUp={() => {
-                        trigger("message");
-                      }}
                       label="Message"
                       multiline
                       rows={4}
-                      required
+                      value={values.message}
+                      onBlur={handleBlur}
+                      onChange={handleChange}
                     />
-                    {errors.message && (
-                      <small className="text-danger">
-                        {errors.message.message}
-                      </small>
+                    {errors.message && touched.message && (
+                      <small className="text-danger">{errors.message}</small>
                     )}
                   </Grid>
                   <Grid item xs={12}>
-                    <CustomButton text="Submit" type="submit" />
+                    <CustomButton
+                      text={loading ? "Sending..." : "Send"}
+                      loading={loading}
+                    />
                   </Grid>
                 </Grid>
               </Grid>

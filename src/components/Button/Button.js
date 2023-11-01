@@ -3,10 +3,12 @@ import { Button } from "@material-ui/core";
 
 import "./Button.css";
 
-const CustomButton = ({ text, icon }) => {
+const CustomButton = ({ text, icon, loading }) => {
+  // console.log(loading);
   return (
     <Button
-      className="custom_btn"
+      className={loading ? "disabled custom_btn" : "custom_btn"}
+      type="submit"
       endIcon={icon ? <div className="btn_icon_container">{icon}</div> : null}
     >
       <span className="btn_text">{text}</span>

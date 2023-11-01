@@ -128,3 +128,7 @@
   color: #787878 !important;
   margin-left: 7px;
 }
+
+.text-danger{
+  font-size: small;
+}

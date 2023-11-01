@@ -23,3 +23,14 @@ code {
   padding: 12px;
   width: 330px;
 }
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+  border: none !important;
+  background-color: yellowgreen !important;
+  font-weight: bold !important;
+  outline: none !important;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+}
