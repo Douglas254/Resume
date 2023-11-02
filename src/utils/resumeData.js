@@ -2,7 +2,7 @@ import {
   Twitter,
   LinkedIn,
   GitHub,
-  SettingsApplications,
+  DesignServices,
   Language,
   AcUnit,
   ViewAgenda,
@@ -26,6 +26,9 @@ import managelandingpage from "../assets/projects/managelandingpage.png";
 import cuisinedishes from "../assets/projects/cuisinedishes.png";
 import astro from "../assets/projects/astro.png";
 import parceldeliveriesadministration from "../assets/projects/parceldeliveriesadministration.png";
+import ultimatehrmgtsystem from "../assets/projects/ultimatehrmgtsystem.png";
+import ustawikiberaproject from "../assets/projects/ustawikiberaproject.png";
+import trafficsignclassification from "../assets/projects/trafficsignclassification.png";
 
 const resumeData = {
   name: "Douglas Obara",
@@ -76,7 +79,7 @@ const resumeData = {
       title: "Frontend Engineer @Side Hustle",
       date: "Apr 2022 - May 2022",
       description:
-        "Optimize the user experience by building and maintaining the user interface, as well as developing usable web applications.",
+        "Creating and maintaining web applications, contributing to UI/UX development and interactive features. Collaborating with senior developers, conducting research, and staying updated with industry trends and best practices to enhance project efficiency and quality.",
     },
     {
       title: "Technical Support @WOFAK",
@@ -125,7 +128,7 @@ const resumeData = {
     {
       title: "Product UI/UX Designer",
       description: "⭐⭐⭐⭐⭐",
-      icon: <SettingsApplications />,
+      icon: <DesignServices />,
     },
     {
       title: "Power Apps Developer",
@@ -174,12 +177,22 @@ const resumeData = {
       description: "",
       links: [
         {
-          link: "https://fredouwebtech.netlify.app/",
-          icon: <GitHub />,
-        },
-        {
           link: "https://nike-store-commercev1.vercel.app/",
           icon: <Language />,
+        },
+      ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "tailwindcss",
+          colortext: "blue",
+        },
+        {
+          name: "vite",
+          colortext: "pink",
         },
       ],
     },
@@ -194,6 +207,20 @@ const resumeData = {
         {
           link: "https://inuaukulima.vercel.app/",
           icon: <Language />,
+        },
+      ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "tailwindcss",
+          colortext: "blue",
+        },
+        {
+          name: "nextjs",
+          colortext: "pink",
         },
       ],
     },
@@ -214,6 +241,20 @@ const resumeData = {
           icon: <Language />,
         },
       ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "tailwindcss",
+          colortext: "blue",
+        },
+        {
+          name: "reactawesomereveal",
+          colortext: "pink",
+        },
+      ],
     },
     {
       tags: "React",
@@ -232,6 +273,24 @@ const resumeData = {
           icon: <Language />,
         },
       ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "css",
+          colortext: "blue",
+        },
+        {
+          name: "reactreveal",
+          colortext: "pink",
+        },
+        {
+          name: "bootstrap",
+          colortext: "yellow",
+        },
+      ],
     },
     {
       tags: "React",
@@ -244,6 +303,24 @@ const resumeData = {
         {
           link: "https://liquor-store-eta.vercel.app",
           icon: <Language />,
+        },
+      ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "tailwindcss",
+          colortext: "blue",
+        },
+        {
+          name: "reactawesomereveal",
+          colortext: "pink",
+        },
+        {
+          name: "vite",
+          colortext: "yellow",
         },
       ],
     },
@@ -260,6 +337,24 @@ const resumeData = {
           icon: <GitHub />,
         },
       ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "reactbootstrap",
+          colortext: "blue",
+        },
+        {
+          name: "reacttoastify",
+          colortext: "pink",
+        },
+        {
+          name: "bootstrap5",
+          colortext: "yellow",
+        },
+      ],
     },
     {
       tags: "Astro",
@@ -271,6 +366,83 @@ const resumeData = {
         {
           link: "https://github.com/Douglas254/Manage-Landing-Page",
           icon: <GitHub />,
+        },
+      ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "reactbootstrap",
+          colortext: "blue",
+        },
+        {
+          name: "reacttoastify",
+          colortext: "pink",
+        },
+        {
+          name: "bootstrap5",
+          colortext: "yellow",
+        },
+      ],
+    },
+    {
+      tags: "React",
+      image: ustawikiberaproject,
+      title: "Ustawi Kibra Project",
+      caption: "Website for a community based organization (CBO).",
+      description: "",
+      links: [
+        {
+          link: "https://ustawi-kibera-project.vercel.app",
+          icon: <Language />,
+        },
+      ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "tailwindcss",
+          colortext: "blue",
+        },
+      ],
+    },
+    {
+      tags: "React",
+      image: ultimatehrmgtsystem,
+      title: "Ultimate",
+      caption:
+        "Project on how to connect the backend login and logout api enpoints & also to use a multi form format in ReactJS",
+      description: "",
+      links: [
+        {
+          link: "",
+          icon: <GitHub />,
+        },
+      ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "restapi",
+          colortext: "blue",
+        },
+        {
+          name: "vite",
+          colortext: "pink",
+        },
+        {
+          name: "localstorage",
+          colortext: "yellow",
+        },
+        {
+          name: "token",
+          colortext: "brown",
         },
       ],
     },
@@ -285,6 +457,16 @@ const resumeData = {
         {
           link: "https://astro-website-self.vercel.app/",
           icon: <Language />,
+        },
+      ],
+      techtools: [
+        {
+          name: "astro",
+          colortext: "orange",
+        },
+        {
+          name: "css",
+          colortext: "blue",
         },
       ],
     },
@@ -305,6 +487,16 @@ const resumeData = {
           icon: <Language />,
         },
       ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "tailwindcss",
+          colortext: "yellow",
+        },
+      ],
     },
     {
       tags: "React",
@@ -321,6 +513,16 @@ const resumeData = {
         {
           link: "https://ristorante-con-fusion-web.netlify.app",
           icon: <Language />,
+        },
+      ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "bootstrap4",
+          colortext: "brown",
         },
       ],
     },
@@ -341,12 +543,22 @@ const resumeData = {
           icon: <Language />,
         },
       ],
+      techtools: [
+        {
+          name: "react",
+          colortext: "orange",
+        },
+        {
+          name: "css",
+          colortext: "blue",
+        },
+      ],
     },
     {
       tags: "DataScience/AI",
       image: diabetesprediction,
       title: "Diabetes Prediction",
-      caption: "With the best model Accuracy Score of 0.7965 (0.80%)",
+      caption: "With the best model accuracy score of 0.7965 (0.80%)",
       description:
         "Predict whether a patient has diabetes or not, based on certain diagnostic measurements included in the dataset. 0 – Absence of Diabetes 1 – Presence of Diabetes",
       links: [
@@ -359,9 +571,77 @@ const resumeData = {
           icon: <Language />,
         },
       ],
+      techtools: [
+        {
+          name: "pandas",
+          colortext: "orange",
+        },
+        {
+          name: "numpy",
+          colortext: "blue",
+        },
+        {
+          name: "matplotlib",
+          colortext: "pink",
+        },
+        {
+          name: "seaborn",
+          colortext: "yellow",
+        },
+      ],
     },
     {
-      tags: "PHP/Laravel",
+      tags: "DataScience/AI",
+      image: trafficsignclassification,
+      title: "Traffic Sign Classification",
+      caption: "Trained the model with 96% accuracy",
+      description:
+        "My undergraduate Project II on Traffic Sign Detection and Recognition System",
+      links: [
+        {
+          link: "",
+          icon: <GitHub />,
+        },
+        {
+          link: "",
+          icon: <Language />,
+        },
+      ],
+      techtools: [
+        {
+          name: "pandas",
+          colortext: "orange",
+        },
+        {
+          name: "numpy",
+          colortext: "blue",
+        },
+        {
+          name: "matplotlib",
+          colortext: "pink",
+        },
+        {
+          name: "keras",
+          colortext: "yellow",
+        },
+        {
+          name: "sklearn",
+          colortext: "red",
+        },
+
+        {
+          name: "opencvpython",
+          colortext: "blue-green",
+        },
+
+        {
+          name: "pillow",
+          colortext: "black",
+        },
+      ],
+    },
+    {
+      tags: "Laravel",
       image: ecommercelaravel,
       title: "E-Commerce-Laravel",
       caption: "built with laravel php-framework(Backend)",
@@ -373,9 +653,19 @@ const resumeData = {
           icon: <GitHub />,
         },
       ],
+      techtools: [
+        {
+          name: "php",
+          colortext: "orange",
+        },
+        {
+          name: "laravel",
+          colortext: "blue",
+        },
+      ],
     },
     {
-      tags: " Wordpress",
+      tags: "Wordpress",
       image: ecommercewordpress,
       title: "E-Commerce Wordpress",
       caption:
@@ -385,6 +675,20 @@ const resumeData = {
         {
           link: "https://github.com/Douglas254/Ecommerce-wordpress",
           icon: <GitHub />,
+        },
+      ],
+      techtools: [
+        {
+          name: "wordpress",
+          colortext: "orange",
+        },
+        {
+          name: "php",
+          colortext: "blue",
+        },
+        {
+          name: "woocommerce",
+          colortext: "pink",
         },
       ],
     },
@@ -402,6 +706,20 @@ const resumeData = {
           icon: <Language />,
         },
       ],
+      techtools: [
+        {
+          name: "powerapps",
+          colortext: "orange",
+        },
+        {
+          name: "sharepoint",
+          colortext: "blue",
+        },
+        {
+          name: "powerautomate",
+          colortext: "pink",
+        },
+      ],
     },
     {
       tags: "Microsoft",
@@ -415,6 +733,16 @@ const resumeData = {
           icon: <Language />,
         },
       ],
+      techtools: [
+        {
+          name: "powerapps",
+          colortext: "orange",
+        },
+        {
+          name: "sharepoint",
+          colortext: "blue",
+        },
+      ],
     },
     {
       tags: "Others",
@@ -425,6 +753,20 @@ const resumeData = {
         {
           link: "https://github.com/Douglas254?tab=repositories",
           icon: <GitHub />,
+        },
+      ],
+      techtools: [
+        {
+          name: "github",
+          colortext: "orange",
+        },
+        {
+          name: "projects",
+          colortext: "blue",
+        },
+        {
+          name: "all",
+          colortext: "pink",
         },
       ],
     },
