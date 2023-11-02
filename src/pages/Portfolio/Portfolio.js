@@ -94,6 +94,18 @@ const Portfolio = () => {
                             {project.caption}
                           </Typography>
                         </CardContent>
+                        <div className="tech_stack">
+                          {project?.techtools?.map(
+                            ({ name, colortext }, index) => (
+                              <span
+                                className={`${colortext}-text-gradient`}
+                                key={index}
+                              >
+                                #{name}
+                              </span>
+                            )
+                          )}
+                        </div>
                       </CardActionArea>
                     </Card>
                   </Grow>
@@ -139,6 +151,13 @@ const Portfolio = () => {
               </a>
             ))}
           </DialogActions>
+          <div className="tech_stack">
+            {ProjectDialog?.techtools?.map(({ name, colortext }, index) => (
+              <span className={`${colortext}-text-gradient`} key={index}>
+                #{name}
+              </span>
+            ))}
+          </div>
         </Dialog>
       </Grid>
     </div>
