@@ -4,7 +4,7 @@ import CustomTimeline, { CustomTimelineSeparator } from "../Timeline/Timeline";
 import PersonOutlineOutlined from "@material-ui/icons/PersonOutlineOutlined";
 
 import resumeData from "../../utils/resumeData";
-import resume from "../../static/resume.pdf";
+import resume from "../../static/DouglasObaraCV.pdf";
 
 import "./Profile.css";
 import TimelineItem from "@material-ui/lab/TimelineItem";
