@@ -12,6 +12,26 @@ body {
   background: #fafafa;
   overflow-x: hidden;
   background: url("../src/assets/background.png");
+
+  --sb-track-color: #e8e8e8;
+  --sb-thumb-color: #eac441;
+  --sb-size: 10px;
+
+  scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
 }
 
 code {
